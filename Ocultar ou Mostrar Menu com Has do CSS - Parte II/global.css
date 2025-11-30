@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --dark-blue: #1a1e30;
+  --blue: #003181;
+  --white: #fff;
+}
+
+a,
+li {
+  all: unset;
+}
+
+a {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+body {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: 15px 20px;
+  background-color: var(--dark-blue);
+  z-index: 9999;
+  gap: 30px;
+  margin: auto;
+}
+
+header .desk-link {
+  width: 100%;
+  max-width: 450px;
+}
+
+header .desk-link ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .desk-link ul li a {
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: var(--blue);
+  }
+}
+
+@media screen and (max-width: 446px) {
+  header .desk-link {
+    display: none;
+  }
+}
